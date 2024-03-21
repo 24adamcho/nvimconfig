@@ -144,6 +144,20 @@ require('nightfox').setup({
 	--		bg0 = palette.high,
 	--	},
 	--},
+	specs = {
+
+	},
+	groups = {
+		all = {
+-- 			Directory = {
+				-- bg = palette.mid
+			-- },
+			WinSeparator = {
+				fg = palette.low,
+				bg = palette.low
+			}
+		}
+	}
 })
 
 vim.cmd("colorscheme carbonfox")

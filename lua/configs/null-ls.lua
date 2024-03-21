@@ -12,29 +12,29 @@ local cda = nls.builtins.code_actions
 
 nls.setup({
     sources = {
-
-        -- Formatting
-        fmt.prettierd,
-        fmt.eslint_d,
-        fmt.prettier.with({
-            filetypes = { 
-							"html", 
-							"json", 
-							"yaml", 
-							"markdown", 
-							"javascript", 
-							"typescript", 
-							"python", 
-							"cpp", 
-							"css", 
-							"sh",
-							"docker",
-              "csharp"
-						},
-        }),
-        fmt.stylua,
-        fmt.rustfmt,
-
+-- 
+        -- -- Formatting
+        -- fmt.prettierd,
+        -- fmt.eslint_d,
+        -- fmt.prettier.with({
+            -- filetypes = { 
+							-- "html", 
+							-- "json", 
+							-- "yaml", 
+							-- "markdown", 
+							-- "javascript", 
+							-- "typescript", 
+							-- "python", 
+							-- "cpp", 
+							-- "css", 
+							-- "sh",
+							-- "docker",
+              -- "csharp"
+						-- },
+        -- }),
+        -- fmt.stylua,
+        -- fmt.rustfmt,
+-- 
         -- Diagnostics
         dgn.eslint_d,
         dgn.shellcheck,
