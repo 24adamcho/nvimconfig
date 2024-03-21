@@ -139,22 +139,22 @@ require('nightfox').setup({
 			comments = "italic",
 		},
 	},
-	--palettes = {
-	--	all = {
-	--		bg0 = palette.high,
-	--	},
-	--},
-	specs = {
-
+	palettes = {
+		all = {
+			green = "#A9FF77"
+		},
 	},
+-- 	specs = {
+		-- all = {
+			-- syntax = {
+				-- func = "#FFCD78"
+			-- }
+		-- }
+	-- },
 	groups = {
 		all = {
--- 			Directory = {
-				-- bg = palette.mid
-			-- },
 			WinSeparator = {
-				fg = palette.low,
-				bg = palette.low
+				fg = palette.low
 			}
 		}
 	}
