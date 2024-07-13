@@ -472,6 +472,12 @@ vim.keymap.set('v', '<C-_>', function() toggle_comment(true) end)
 vim.cmd [[ set number ]]
 vim.cmd [[ set norelativenumber ]]
 
+vim.api.nvim_create_autocmd({'TermOpen'}, {
+		callback = function(ev)
+			vim.cmd [[ set nonumber ]]
+		end
+	})
+
 --function to toggle numbers
 local function toggle_relative_numbers()
 	if vim.o.relativenumber and vim.o.number then
