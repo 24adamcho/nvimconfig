@@ -295,7 +295,6 @@ require('neo-tree').setup({
 		},
 		close_if_last_window = true,
 		enable_git_status = 'true',
-		enable_normal_mode_for_inputs = false,
 		filesystem = {
 			filtered_items = {
 				visible = true,
