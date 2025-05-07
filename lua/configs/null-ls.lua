@@ -40,6 +40,27 @@ nls.setup({
         dgn.shellcheck,
         dgn.pylint.with({
             method = nls.methods.DIAGNOSTICS_ON_SAVE,
+            diagnostics_format = "[#{c}] #{m} (#{s})",
+            filter = function(diagnostic)
+                local ignoreList = {
+                    [""]=true,
+                    ["too-many-nested-blocks"]=true,
+                    ["too-many-branches"]=true,
+                    ["too-many-locals"]=true,
+                    ["line-too-long"]=true,
+                    ["invalid-name"]=true,
+                    ["missing-module-docstring"]=true,
+                    ["missing-class-docstring"]=true,
+                    ["missing-function-docstring"]=true,
+                    ["wrong-import-order"]=true,
+                    ["multiple-imports"]=true,
+                }
+                if ignoreList[diagnostic.code] then
+                    return false
+                else
+                    return true
+                end
+            end,
         }),
 
         -- Code Actions
